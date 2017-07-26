@@ -1,11 +1,4 @@
 export default class NumberToChineseWords{
-  constructor(){
-    NumberToChineseWords.digits = ['零','一', '二', '三', '四', '五', '六', '七', '八', '九'];
-    NumberToChineseWords.units = ['','十', '百', '千', '萬', '十', '百', '千', '億', '十', '百', '千', '萬'];
-    NumberToChineseWords.ordinal = "第";
-    NumberToChineseWords.point = "點";
-  }
-
   static toOrdinal(num){
     return NumberToChineseWords.ordinal + num;
   }
@@ -45,3 +38,8 @@ export default class NumberToChineseWords{
     return NumberToChineseWords.point + str.replace(new RegExp("^一","i") , "");
   }
 }
+
+NumberToChineseWords.digits = ['零','一', '二', '三', '四', '五', '六', '七', '八', '九'];
+NumberToChineseWords.units = ['','十', '百', '千', '萬', '十', '百', '千', '億', '十', '百', '千', '萬'];
+NumberToChineseWords.ordinal = "第";
+NumberToChineseWords.point = "點";

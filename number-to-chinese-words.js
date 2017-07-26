@@ -11,11 +11,6 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var NumberToChineseWords = function () {
   function NumberToChineseWords() {
     _classCallCheck(this, NumberToChineseWords);
-
-    NumberToChineseWords.digits = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九'];
-    NumberToChineseWords.units = ['', '十', '百', '千', '萬', '十', '百', '千', '億', '十', '百', '千', '萬'];
-    NumberToChineseWords.ordinal = "第";
-    NumberToChineseWords.point = "點";
   }
 
   _createClass(NumberToChineseWords, null, [{
@@ -68,3 +63,9 @@ var NumberToChineseWords = function () {
 }();
 
 exports.default = NumberToChineseWords;
+
+
+NumberToChineseWords.digits = ['零', '一', '二', '三', '四', '五', '六', '七', '八', '九'];
+NumberToChineseWords.units = ['', '十', '百', '千', '萬', '十', '百', '千', '億', '十', '百', '千', '萬'];
+NumberToChineseWords.ordinal = "第";
+NumberToChineseWords.point = "點";

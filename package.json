@@ -1,8 +1,8 @@
 {
   "name": "number-to-chinese-words",
-  "version": "1.0.0",
+  "version": "1.0.6",
   "description": "Convert a number to chinese words. Inspired from github.com/marlun78/number-to-words",
-  "main": "index.js",
+  "main": "number-to-chinese-words.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build-js && npm run build-min",
