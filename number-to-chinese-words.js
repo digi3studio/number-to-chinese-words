@@ -40,7 +40,7 @@ var NumberToChineseWords = function () {
         n = Math.floor(n / 10);
       }
 
-      return num < 1 ? digits[0] : str.replace(new RegExp("零+$", "i"), '').replace(new RegExp("^一十", "i"), "十");
+      return (num < 0 ? NumberToChineseWords.minus : "") + (num < 1 ? digits[0] : str.replace(new RegExp(NumberToChineseWords.digits[0] + "+$", "i"), '').replace(new RegExp("^" + NumberToChineseWords.digits[1] + NumberToChineseWords.units[1], "i"), NumberToChineseWords.units[1]));
     }
   }, {
     key: 'floatToChinese',
@@ -55,7 +55,7 @@ var NumberToChineseWords = function () {
         f = Math.floor(f / 10);
       }
 
-      return NumberToChineseWords.point + str.replace(new RegExp("^一", "i"), "");
+      return NumberToChineseWords.point + str.replace(new RegExp("^" + NumberToChineseWords.digits[1], "i"), "");
     }
   }]);
 
@@ -69,3 +69,4 @@ NumberToChineseWords.digits = ['零', '一', '二', '三', '四', '五', '六', 
 NumberToChineseWords.units = ['', '十', '百', '千', '萬', '十', '百', '千', '億', '十', '百', '千', '萬'];
 NumberToChineseWords.ordinal = "第";
 NumberToChineseWords.point = "點";
+NumberToChineseWords.minus = "負";
