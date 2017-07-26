@@ -109,6 +109,7 @@
     minus: "負"
   };
 
+  var NumberToChineseWords = exports.NumberToChineseWords = NC;
   var toOrdinal = exports.toOrdinal = NC.toOrdinal;
   var toWords = exports.toWords = NC.toWords;
   var toWordsOrdinal = exports.toWordsOrdinal = NC.toWordsOrdinal;

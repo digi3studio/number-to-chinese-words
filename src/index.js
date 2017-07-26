@@ -52,6 +52,7 @@ NC.labels = {
   minus: "負"
 };
 
+export let NumberToChineseWords = NC;
 export let toOrdinal = NC.toOrdinal;
 export let toWords = NC.toWords;
 export let toWordsOrdinal = NC.toWordsOrdinal;
