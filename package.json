@@ -1,12 +1,12 @@
 {
   "name": "number-to-chinese-words",
-  "version": "1.0.8",
+  "version": "1.0.11",
   "description": "Convert a number to chinese words. Inspired from github.com/marlun78/number-to-words",
   "main": "number-to-chinese-words.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npm run build-js && npm run build-min",
-    "build-js": "babel src/index.js --out-file number-to-chinese-words.js --presets=es2015",
+    "build-js": "babel src/index.js --out-file number-to-chinese-words.js --presets=es2015 --plugins transform-es2015-modules-umd",
     "build-min": "uglifyjs -o number-to-chinese-words.min.js number-to-chinese-words.js"
   },
   "repository": {
@@ -30,6 +30,7 @@
   "devDependencies": {
     "babel-cli": "^6.24.1",
     "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-2": "^6.24.1",
