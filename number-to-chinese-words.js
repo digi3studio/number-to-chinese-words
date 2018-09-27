@@ -60,8 +60,8 @@
     var zero = digits[0];
 
     str = str.replace(new RegExp("(" + zero + ")[" + smallUnit + "]", 'g'), "$1") //零千,零百,零十 keeps 零
-    .replace(new RegExp("([" + bigUnit + "])[^" + smallUnit + "]+([" + bigUnit + "])", 'g'), '$1零') //大數中間沒細數，補零
-    .replace(new RegExp("([" + smallUnit + "])" + zero + "+([" + bigUnit + "])", "g"), "$1$2零").replace(new RegExp("(" + digits[0] + ")+", "g"), "$1") //group 零
+    .replace(new RegExp("([" + bigUnit + "])[^" + smallUnit + "]+([" + bigUnit + "])", 'g'), '$1' + zero) //大數中間沒細數，補零
+    .replace(new RegExp("([" + smallUnit + "])" + zero + "+([" + bigUnit + "])", "g"), "$1$2" + zero).replace(new RegExp("(" + digits[0] + ")+", "g"), "$1") //group 零
     .replace(new RegExp(zero + "+$"), ""); //tail zero remove
 
     if (isCheque != true) {
