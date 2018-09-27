@@ -1,6 +1,6 @@
 {
   "name": "number-to-chinese-words",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "Convert a number to chinese words. Inspired from number-to-words",
   "main": "number-to-chinese-words.js",
   "scripts": {
